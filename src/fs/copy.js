@@ -15,7 +15,7 @@ const copy = async () => {
             await access(pathToCreate, constants.F_OK);
             throw new Error('FS operation failed');
         } catch (err) {
-            if (err.code !== 'ENOENT') throw err; // Ошибка, если папка files_copy существует
+            if (err.code !== 'ENOENT') throw err;
         }
 
         await mkdir(pathToCreate);
